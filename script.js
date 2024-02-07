@@ -45,7 +45,7 @@ function myMenuFunction(){
  const sr = ScrollReveal({
         origin: 'top',
         distance: '80px',
-        duration: 2000,
+        duration: 1200,
         reset: true     
  })
 
@@ -61,6 +61,9 @@ sr.reveal('.featured-image',{delay: 300})
 /* -- PROJECT BOX -- */
 sr.reveal('.project-box',{interval: 200})
 
+/* -- EXPERIENCES BOX -- */
+sr.reveal('.experiences-box',{interval: 200})
+
 /* -- HEADINGS -- */
 sr.reveal('.top-header',{})
 
@@ -70,7 +73,7 @@ sr.reveal('.top-header',{})
 const srLeft = ScrollReveal({
   origin: 'left',
   distance: '80px',
-  duration: 2000,
+  duration: 1200,
   reset: true
 })
 
@@ -91,7 +94,7 @@ srRight.reveal('.form-control',{delay: 100})
 
 
 /* ----- CHANGE ACTIVE LINK ----- */
-
+/*
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive() {
@@ -99,19 +102,41 @@ function scrollActive() {
 
   sections.forEach(current =>{
     const sectionHeight = current.offsetHeight,
-        sectionTop = current.offsetTop - 50,
+      sectionTop = current.offsetTop - 10,
       sectionId = current.getAttribute('id')
 
     if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) { 
+      console.log(`Adding active-link to ${sectionId}`);
 
-        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
+        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link');
 
     }  else {
+      console.log(`Removing active-link from ${sectionId}`);
 
-      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
+      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link');
 
     }
   })
 }
+// Ajoutez un gestionnaire de clic pour le lien "Contact"
+const contactLink = document.querySelector('.nav-menu a[href="#contact"]');
+contactLink.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  // Retirez "active-link" de tous les liens
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.classList.remove('active-link');
+  });
+
+  // Ajoutez "active-link" au lien "Contact" cliqué
+  contactLink.classList.add('active-link');
+
+  // Faites défiler jusqu'à la section "Contact" (facultatif)
+  const contactSection = document.getElementById('contact');
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  }
+});
 
 window.addEventListener('scroll', scrollActive)
+*/
