@@ -189,6 +189,9 @@ nav{
 .typedText{
     text-transform: capitalize;
     color: var(--text-color-third);
+    white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+    overflow: hidden; /* Cache tout contenu dépassant de la zone d'affichage */
+    text-overflow: ellipsis; /* Ajoute des points de suspension (...) pour indiquer que le texte est tronqué */
 }
 .featured-text-info{
     font-size: 15px;
