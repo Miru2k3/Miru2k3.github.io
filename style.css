@@ -594,6 +594,18 @@ textarea{
     border-radius: 50%;
 }
 
+/* ----- ARTICLE BOX -----*/
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les articles */
+}
+
+.article {
+    flex: 1 1 50%; /* Chaque article prend 50% de la largeur de la ligne */
+}
+
 
 /* ----- FOOTER BOX ----- */
 footer{
