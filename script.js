@@ -15,17 +15,17 @@ function myMenuFunction(){
   function headerShadow() {
     const navHeader =document.getElementById("header");
 
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop >  150) {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
 
       navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-      navHeader.style.height = "170px";
-      navHeader.style.lineHeight = "170px";
+      navHeader.style.height = "70px";
+      navHeader.style.lineHeight = "70px";
 
     } else {
 
       navHeader.style.boxShadow = "none";
-      navHeader.style.height = "190px";
-      navHeader.style.lineHeight = "190px";
+      navHeader.style.height = "90px";
+      navHeader.style.lineHeight = "90px";
 
     }
   }
@@ -33,7 +33,7 @@ function myMenuFunction(){
 
 /* ----- TYPING EFFECT ----- */
  var typingEffect = new Typed(".typedText",{
-    strings : ["Développeur full-stack", "Développeur Polyvalent", "Designeur"],
+    strings : ["Développeur Web", "Développeur Application"],
     loop : true,
     typeSpeed : 100, 
     backSpeed : 80,
