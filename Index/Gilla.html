@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet GILLA4a</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ----- VARIABLES ----- */
+        :root {
+            --body-color: rgb(250, 250, 250);
+            --color-white: rgb(255, 255, 255);
+            --text-color-second: rgb(68, 68, 68);
+            --text-color-third: rgb(30, 159, 171);
+            --first-color: rgb(110, 87, 224);
+            --first-color-hover: rgb(40, 91, 212);
+            --second-color: rgb(0, 201, 255);
+            --third-color: rgb(192, 166, 49);
+            --first-shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        /* ----- BASE ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--body-color);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* ----- NAVIGATION BAR ----- */
+        nav {
+            background: var(--body-color);
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* ----- MAIN CONTENT ----- */
+        .main {
+            text-align: center;
+            padding: 50px;
+            color: var(--text-color-second);
+        }
+
+        .main h1 {
+            color: var(--text-color-third);
+            margin-bottom: 20px;
+        }
+
+        .main p {
+            color: var(--text-color-second);
+            line-height: 1.6;
+        }
+
+        /* ----- FOOTER ----- */
+        footer {
+            background: var(--first-color);
+            color: var(--color-white);
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Projet GILLA4a</h1>
+    </nav>
+    <div class="container main">
+        <section>
+            <h2>Présentation du Projet</h2>
+            <p>
+                Le projet GILLA a pour objectif de mettre en place une plateforme en ligne permettant aux élèves, étudiants,
+                professeurs et personnels du lycée de signaler tout type de problème rencontré dans les locaux de l'établissement.
+                Ces problèmes peuvent inclure des incidents liés à l'éclairage, à la fermeture des portes ou des fenêtres, au matériel informatique ou logiciel, et bien d'autres.
+            </p>
+            <img src="../images/accueil_f_gilla1.png" alt="">
+            <p> Définition des pilliers du projet </p>
+            <img src="../images/cycleV.png" alt="">
+            <p> Planning générale du projet GILLA </p>
+            <img src="../images/planning.png" alt="">
+
+            <h2>Technologies Utilisées</h2>
+            <p>
+                Le projet GILLA est développé en utilisant une architecture MVC (Modèle-Vue-Contrôleur, Frontend comme Backend) avec Framework/CMS Joomla 4.4 et un développement PHP pour assurer une séparation claire des préoccupations et une maintenabilité accrue du code.
+            </p>
+            <img src="../images/structure.png">
+            <p> Voici la base de donnée sur Phpmyadmin </p>
+            <img src="../images/database.png" alt="salut">
+        </section>
+
+        <section>
+            <h3>Interface Utilisateur</h3>
+            <p>
+                Les utilisateurs peuvent soumettre des tickets d'incidents via une interface conviviale et intuitive.
+                Ils ont la possibilité de spécifier la nature de l'incident, sa localisation, sa date et de fournir une description détaillée du problème rencontré.
+                Une version mobile de l'interface utilisateur est disponible, offrant une expérience optimisée sur les appareils mobiles.
+            </p>
+            <img src="../images/accueil_f_gilla1.png" alt="">
+            <img src="../images/android.png" alt="">
+            <h3>Interface Administrateur</h3>
+            <p>
+                Les administrateurs ont un accès sécurisé à une interface backend dédiée pour gérer tous les aspects du site public (frontend) de GILLA.
+                Elle offre aux administrateurs les outils nécessaires pour superviser et optimiser le processus de gestion des incidents, agents, personnels, affectation, etc, dans tout l'établissement.
+            </p>
+            <img src="../images/interfaceLogged.png" alt="">
+            <p> Le modèle gère les données du site. Récupère les informations dans la base de données, organises et les assembles pour qu'elles puissent ensuite être traitées par le contrôleur et la vue</p>
+            <img src="../images/./backendStructure.png" alt="">
+        </section>
+
+        <section>
+            
+
+            <p>
+                La version mobile de l'interface utilisateur est développée avec Android Studio en utilisant Java pour garantir une compatibilité et une performance optimales sur les appareils android.
+                Une API de test a été spécialement développée en PHP pour pouvoir consulter la base de données GILLA à travers le framework Joomla par le protocole http.
+            </p>
+            <img src="../images/codeAndroidStudio.png" alt="">
+        </section>
+
+        <section>
+            <h2>Gestion et Organisation</h2>
+            <p>
+                La gestion des versions logicielles est faite avec le logiciel libre Git.
+                Il permet l'enregistrement des états de la base de code (commits), l'organisation en branches pour développer des fonctionnalités séparément, et le travail collaboratif et la distribution du projet.
+            </p>
+            <p>
+                Le développement du projet Gilla4a a été confié par notre professeur pour toute la classe en option SLAM. L'organisation a coïncidé avec notre progression pédagogique pour ce bloc.
+                Le projet a donc été décomposé en trois livrables principaux liés à l’architecture du framework Joomla.
+            </p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Projet GILLA4a. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
